@@ -18,7 +18,7 @@ class DashboardController extends Controller
     {
         $categories = Category::latest()->get();
         // $events=Event::latest()->get();
-        // $events = [];
+        $events = [];
         $acceptfrineds = AcceptInvite::where('invite_id', Auth::user()->id)->get();
         foreach ($acceptfrineds as $friend) {
 
