@@ -99,7 +99,7 @@
                                     </div>
                                     <div class="modal-footer shadow">
                                         <button type="submit"
-                                            class="btn btn-success m-auto w-50 add_category btn-sm ">Update <i
+                                            class="btn btn-success m-auto w-50 btn-sm ">Update <i
                                                 class="fa-solid fa-paper-plane"></i></button>
                                     </div>
                                     </form>

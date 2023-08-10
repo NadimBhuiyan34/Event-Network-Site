@@ -3,10 +3,11 @@
 
       <x-slot name="title">WayzAway-Profile-page</x-slot>
 
-      <x-alert-message.alert />
+    
 
 
       <div class="container-fluid" style="margin-top:100px">
+       <x-alert-message.alert />
           <div id="content" class="content p-0">
               <div class="profile-header">
                   <div class="profile-header-cover"></div>

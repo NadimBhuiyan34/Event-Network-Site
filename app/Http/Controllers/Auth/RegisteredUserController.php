@@ -30,7 +30,20 @@ class RegisteredUserController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
-            'date_of_birth' => ['required'],
+            'date_of_birth' => [
+                'required',
+                'date',
+                function ($attribute, $value, $fail) {
+                    $minimumAge = 18;
+                    $today = now();
+                    $birthdate = \Carbon\Carbon::createFromFormat('Y-m-d', $value);
+                    $age = $birthdate->diffInYears($today);
+    
+                    if ($age < $minimumAge) {
+                        $fail("You must be at least $minimumAge years old to register.");
+                    }
+                },
+            ],
             'country' => ['required'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);

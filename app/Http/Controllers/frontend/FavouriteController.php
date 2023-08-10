@@ -38,6 +38,12 @@ class FavouriteController extends Controller
 
 
     }
+
+    public function destroy(string $id)
+    {
+        Favourite::findOrFail($id)->delete();
+        return redirect()->back()->with('success','Your favourite event deleted successfully');
+    }
     
     
 }

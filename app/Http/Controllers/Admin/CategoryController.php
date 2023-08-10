@@ -45,11 +45,12 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         $category=Category::findOrFail($id);
-
+        
+              
         $category->update([
           'title'=>$request->title,
           'description'=>$request->description,
-          'is_active'=>$request->isActive,
+          'is_active'=>$request->is_active??false,
         ]);
 
         return redirect()->back()->with('success','Category updated successfully');

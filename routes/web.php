@@ -70,6 +70,7 @@ Route::get('/accept-invitation/{email}/{id}', [FriendController::class, 'acceptI
 //user favourite 
 Route::get('/favourites', [FavouriteController::class, 'index'])->name('favourites.index')->middleware('auth');
 Route::post('/favourites', [FavouriteController::class, 'store'])->name('favourites.store')->middleware('auth');
+Route::delete('/favourites/{favourite}', [FavouriteController::class, 'destroy'])->name('favourites.destroy')->middleware('auth');
 
 // comments for user
 Route::post('/commentdata',[CommentController::class,'comment'])->name('comment.data')->middleware('auth');

@@ -1,12 +1,6 @@
- <footer id="footer" class="footer">
-    <div class="copyright">
-      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+<footer id="footer" class="footer" style="position: fixed; bottom: 0; width: 100%; background-color: #f8f9fa; padding: 10px 0; box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.1);">
+    <div class="container" style="text-align: center;">
+        <strong><span style="color: #333;">WayzAway</span></strong>
     </div>
-    <div class="credits">
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-    </div>
-  </footer><!-- End Footer -->
+</footer>
+<!-- End Footer -->

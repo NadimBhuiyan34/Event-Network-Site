@@ -70,7 +70,7 @@
                         <div class="mb-3">
                             <input type="date" class="form-control" id="date_of_birth" aria-describedby="emailHelp"
                                 placeholder="Date of Birth" name="date_of_birth" value="{{ old('date_of_birth') }}">
-                            @error('email')
+                            @error('date_of_birth')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>

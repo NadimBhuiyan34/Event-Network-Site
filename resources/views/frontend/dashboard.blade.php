@@ -3,11 +3,17 @@
 
      <x-slot name="title">WayzAway-Dashboard</x-slot>
 
-
+    
 
      <div class="container-fluid" style="margin-top:100px">
+     <x-alert-message.alert />
          <div class="row mt-3">
-             <x-alert-message.alert />
+            
+             
+      
+              
+
+
              {{-- Left Side --}}
              <div class="col-md-9">
 

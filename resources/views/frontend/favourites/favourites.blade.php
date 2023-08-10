@@ -50,10 +50,28 @@
                                  <div class="row ">
                                      @foreach ($favourites as $favourite)
                                          <div class="col-md-6 col-lg-6 col-xl-6 mb-3">
-                                             <div class="card text-black">
-                                                 <span
+                                             <div class="card text-black d-flex justify-content-between">
+                                               
+                                                      <div>
+                                                      <span
                                                      class="badge bg-danger w-25 mt-2 shadow p-2">{{ $favourite->event->date }}</span>
+                                                      </div>
+                                                     <div class="dropdown">
+                                                      <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                                          <i class="fas fa-bars me-2 fs-3 text-dark mt-1"></i>
+                                                          <!-- Font Awesome icon -->
+                                                      </a>
+                                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 
+                                                          
+                                                          <form action="{{route('favourites.destroy',['favourite'=>$favourite->id])}}" method="POST">
+                                                              @csrf
+                                                              @method('DELETE')
+                                                              <input type="submit" value="Remove" class="dropdown-item text-danger">
+                                                          </form>
+
+                                                      </ul>
+                                                  </div>
                                                  <img src="{{ asset('storage/image/events/' . $favourite->event->banner_image) }}"
                                                      class="card-img-top" alt="Apple Computer" />
 
