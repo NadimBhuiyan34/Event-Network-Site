@@ -49,7 +49,8 @@
                          <section style="background-color:white;">
                              <div class="container">
                                  <div class="row ">
-                                     @foreach ($events as $event)
+                                 @foreach ($events as $eventsData)
+                                      @foreach ($eventsData as $event)
                                          <div class="col-md-6 col-lg-6 col-xl-6 mb-3">
                                              <div class="card text-black">
                                                  <span
@@ -160,6 +161,7 @@
                                          </div>
                                         
                                      @endforeach
+                                     @endforeach
 
 
 
@@ -213,7 +215,8 @@
 
                      <div class="card-body">
 
-                         @foreach ($upcomingEvents as $upcomingEvent)
+                       @if(isset($upcomingEvents))
+                       @foreach ($upcomingEvents as $upcomingEvent)
                              <div class="row mb-3">
 
                                  <div class="col-md-6 col-6">
@@ -231,6 +234,7 @@
                                  </div>
                              </div>
                          @endforeach
+                       @endif
 
 
                      </div>
